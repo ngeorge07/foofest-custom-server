@@ -24,7 +24,7 @@ const addBands = (allBands) => {
     }
   }
 
-  shuffle(allBands);
+  shuffle(allBands.slice(16, 126));
   return allBands;
 };
 
