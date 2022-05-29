@@ -25,8 +25,6 @@ const addBands = (allBands) => {
     }
   }
 
-  shuffle(allBands.slice(16, 126));
-
   const firstHalf = allBands.slice(0, 16);
   const secondHalf = allBands.slice(16, 126);
   shuffle(secondHalf);
