@@ -1,5 +1,6 @@
 //var faker = require("faker");
 const bands = require("./static/bands.json");
+const { shuffle } = require("./util/shuffle");
 const { numberToTime } = require("./util/numberToTime");
 const { rndBetween, rndBetweenEven } = require("./util/rnd");
 const { observer } = require("./util/observer");
@@ -55,6 +56,7 @@ class Information {
 
   fillSlots() {
     const copy = bands.map((band) => band);
+    shuffle(copy);
 
     this._fillStage(this.scenes[0], copy.slice(0, 42));
     this._fillStage(this.scenes[1], copy.slice(42, 84));
