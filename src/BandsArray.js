@@ -25,8 +25,14 @@ const addBands = (allBands) => {
     }
   }
 
-  const firstHalf = allBands.slice(0, 16);
-  const secondHalf = allBands.slice(16, 126);
+  const firstHalf = allBandsfilter((band) => band.name !== "break").slice(
+    0,
+    16
+  );
+  const secondHalf = allBandsfilter((band) => band.name !== "break").slice(
+    16,
+    126
+  );
   shuffle(secondHalf);
 
   allBands = firstHalf.concat(secondHalf);
