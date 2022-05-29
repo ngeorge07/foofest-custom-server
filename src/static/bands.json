@@ -49,7 +49,7 @@
     "logoCredits": "By (CC BY-SA 2.0) - File:Jimmy Page with Robert Plant 2 - Led Zeppelin - 1977.jpgFile:John Bonham 1975.jpgFile:JohnPaulJones1980-2.jpg, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=16751084",
     "bio": "Led Zeppelin were an English rock band formed in London in 1968. The group consisted of Robert Plant (Vocal), Jimmy Page (Guitar), John Paul Jones (Bass, Keyboard) and John Bonham (Drums). The band's heavy, guitar-driven sound, rooted in blues and psychedelia on their early albums, has earned them recognition as one of the progenitors of heavy metal. They achieved significant commercial success with albums such as Led Zeppelin (1969), Led Zeppelin II (1969), Led Zeppelin III (1970), Led Zeppelin IV (1971), Houses of the Holy (1973), and Physical Graffiti (1975). Their song ‘Stairway to Heaven’ is among the most popular and influential rock music of all time.Led Zeppelin are widely considered one of the most successful, innovative, and influential rock groups in history.They are one of the best - selling music artists in the history of audio recording;various sources estimate the group 's record sales at 200 to 300 million units worldwide. With RIAA-certified sales of 111.5 million units, they are the second-best-selling band in the United States. They were inducted into the Rock Hall of Fame in 1995.",
     "genre": "Rock",
-    "stage": "Jotunheim"
+    "stage": "Midgard"
   },
   {
     "name": "The Beatles",
@@ -62,7 +62,7 @@
     "logo": "720px-The_Fabs.JPG",
     "bio": "The Beatles were an English rock band formed in Liverpool in 1960. The members consisted of John Lennon, Paul McCartney, George Harrison and Ringo Starr. They were soon known as the foremost and most influential act of rock era. Rooted in skiffle, beat, and 1950s rock and roll, the Beatles later experimented with several genres, ranging from pop ballads and Indian music to psychedelia and hard rock, often incorporating classical elements in innovative ways.The Beatles produced what many consider their finest material, from 1965 onwards including the innovative and widely influential albums Rubber Soul(1965), Revolver(1966), Sgt.Pepper 's Lonely Hearts Club Band (1967), The Beatles (commonly known as the White Album, 1968) and Abbey Road (1969).According to the RIAA, the Beatles are the best - selling music artists in the United States, with 178 million certified units.They have received ten Grammy Awards, an Academy Award for Best Original Song Score and fifteen Ivor Novello Awards.They were inducted into the Rock and Roll and Roll Hall of Fame in 1988. ",
     "genre": "Rock",
-    "stage": "Vanaheim"
+    "stage": "Jotunheim"
   },
   {
     "name": "Pink Floyd",
@@ -473,7 +473,8 @@
     "members": ["Meda Cremin", "Kallie Keebler"],
     "genre": "Jazz",
     "logo": "https://placeimg.com/720/480/fashion?33359",
-    "bio": "Sunt quo nihil consequatur. Cupiditate et corrupti. Non non eum nihil asperiores. Facere doloribus explicabo velit. Itaque eveniet sint.\n \rError accusantium numquam voluptate corrupti earum hic quod omnis. Voluptas non quos voluptatem consequatur reiciendis. Perspiciatis velit et repudiandae sint aspernatur quo odit fuga eaque. Omnis dolor quibusdam officiis. Voluptate qui autem asperiores. Reiciendis qui explicabo rerum iure dolores accusantium est et distinctio.\n \rAb sit eligendi. Id amet eum. Sint non porro et velit. In sed consequatur. In officia temporibus saepe accusantium. Sed ut nihil in."
+    "bio": "Sunt quo nihil consequatur. Cupiditate et corrupti. Non non eum nihil asperiores. Facere doloribus explicabo velit. Itaque eveniet sint.\n \rError accusantium numquam voluptate corrupti earum hic quod omnis. Voluptas non quos voluptatem consequatur reiciendis. Perspiciatis velit et repudiandae sint aspernatur quo odit fuga eaque. Omnis dolor quibusdam officiis. Voluptate qui autem asperiores. Reiciendis qui explicabo rerum iure dolores accusantium est et distinctio.\n \rAb sit eligendi. Id amet eum. Sint non porro et velit. In sed consequatur. In officia temporibus saepe accusantium. Sed ut nihil in.",
+    "stage": "Vanaheim"
   },
   {
     "name": "Hansen, Steuber and Block",
@@ -488,7 +489,8 @@
     "members": ["Chance Wilderman", "Krista Mertz", "Kory Cummerata"],
     "genre": "Folk",
     "logo": "https://placeimg.com/720/480/food?85629",
-    "bio": "Quisquam aut perspiciatis minus et deleniti cupiditate est. Nihil officiis fugit sed explicabo. Qui rerum aperiam maxime cum et voluptatem. Libero ut et veniam. Reiciendis in nesciunt et impedit odit. Tempora ad quia eum dicta rem aut incidunt.\n \rLibero vel qui praesentium cumque accusamus aliquam. Et et explicabo voluptatem reiciendis est expedita aut aperiam. Possimus illum quod ipsum nam dignissimos nobis ea. Repellat eligendi quia mollitia. Ut qui perspiciatis aut. Est libero eum quia quia delectus.\n \rDolorem dolores molestiae omnis unde. Repudiandae enim nam. Eos eligendi aut. Nesciunt minima est magnam minima quo. Natus nesciunt aliquam iste laboriosam inventore molestiae voluptatibus."
+    "bio": "Quisquam aut perspiciatis minus et deleniti cupiditate est. Nihil officiis fugit sed explicabo. Qui rerum aperiam maxime cum et voluptatem. Libero ut et veniam. Reiciendis in nesciunt et impedit odit. Tempora ad quia eum dicta rem aut incidunt.\n \rLibero vel qui praesentium cumque accusamus aliquam. Et et explicabo voluptatem reiciendis est expedita aut aperiam. Possimus illum quod ipsum nam dignissimos nobis ea. Repellat eligendi quia mollitia. Ut qui perspiciatis aut. Est libero eum quia quia delectus.\n \rDolorem dolores molestiae omnis unde. Repudiandae enim nam. Eos eligendi aut. Nesciunt minima est magnam minima quo. Natus nesciunt aliquam iste laboriosam inventore molestiae voluptatibus.",
+    "stage": "Vanaheim"
   },
   {
     "name": "VonRueden LLC",
