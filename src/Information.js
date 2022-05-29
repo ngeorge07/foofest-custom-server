@@ -60,6 +60,7 @@ class Information {
     shuffle(secondHalf);
 
     const copy = firstHalf.concat(secondHalf).map((band) => band);
+    console.log(copy.slice(0, 42).length);
 
     this._fillStage(this.scenes[0], copy.slice(0, 42));
     this._fillStage(this.scenes[1], copy.slice(42, 84));
