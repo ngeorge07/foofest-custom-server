@@ -20,6 +20,7 @@ function createFest(name) {
   fest.information = information.slots;
 
   fest.bands = Bands;
+
   const eventLog = new EventLog();
   fest.eventLog = eventLog;
   fest.booking = new Booking(fest);

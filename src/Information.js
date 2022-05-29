@@ -9,7 +9,9 @@ const { events } = require("./util/events");
 class Information {
   constructor(fest) {
     //TODO: ? flatten array and add stage/day?
+
     this.fest = fest;
+
     this.scenes = ["Midgard", "Vanaheim", "Jotunheim"];
     this.days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
     this.slots = {};
@@ -62,20 +64,59 @@ class Information {
   }
 
   _fillStage(stage, acts) {
-    this.slots[stage].mon = this._addBreaks(acts.slice(0, 6));
-    this.slots[stage].tue = this._addBreaks(acts.slice(6, 12));
-    this.slots[stage].wed = this._addBreaks(acts.slice(12, 18));
-    this.slots[stage].thu = this._addBreaks(acts.slice(18, 24));
-    this.slots[stage].fri = this._addBreaks(acts.slice(24, 30));
-    this.slots[stage].sat = this._addBreaks(acts.slice(30, 36));
-    this.slots[stage].sun = this._addBreaks(acts.slice(36, 42));
+    this.slots[stage].mon = this._addBreaks(acts.slice(0, 6), stage, "Monday");
+    this.slots[stage].tue = this._addBreaks(
+      acts.slice(6, 12),
+      stage,
+      "Tuesday"
+    );
+    this.slots[stage].wed = this._addBreaks(
+      acts.slice(12, 18),
+      stage,
+      "Wednesday"
+    );
+    this.slots[stage].thu = this._addBreaks(
+      acts.slice(18, 24),
+      stage,
+      "Thursday"
+    );
+    this.slots[stage].fri = this._addBreaks(
+      acts.slice(24, 30),
+      stage,
+      "Friday"
+    );
+    this.slots[stage].sat = this._addBreaks(
+      acts.slice(30, 36),
+      stage,
+      "Saturday"
+    );
+    this.slots[stage].sun = this._addBreaks(
+      acts.slice(36, 42),
+      stage,
+      "Sunday"
+    );
 
     //console.dir(this.slots);
   }
-  _addBreaks(acts) {
+
+  _addBreaks(acts, stage, day) {
     const nextActs = [];
     let start = 0;
     acts.forEach((act) => {
+      let color;
+      let runeUrl;
+
+      if (stage === "Midgard") {
+        color = "accent_red";
+        runeUrl = "midgard.svg";
+      } else if (stage === "Vanaheim") {
+        color = "accent_blue";
+        runeUrl = "vanaheim.svg";
+      } else {
+        color = "accent_yellow";
+        runeUrl = "jotunheim.svg";
+      }
+
       nextActs.push({
         start: numberToTime(start),
         end: numberToTime(start + 2),
@@ -86,6 +127,10 @@ class Information {
         logo: act.logo,
         bio: act.bio,
         favorite: false,
+        stage,
+        day,
+        color,
+        runeUrl,
       });
       nextActs.push({
         start: numberToTime(start + 2),
