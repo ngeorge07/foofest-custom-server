@@ -107,10 +107,10 @@ class Information {
       let runeUrl;
       let logo;
 
-      if (stage === "Midgard") {
+      if (act.stage ? act.stage === "Midgard" : stage === "Midgard") {
         color = "accent_red";
         runeUrl = "midgard.svg";
-      } else if (stage === "Vanaheim") {
+      } else if (act.stage ? act.stage === "Vanaheim" : stage === "Vanaheim") {
         color = "accent_blue";
         runeUrl = "vanaheim.svg";
       } else {
