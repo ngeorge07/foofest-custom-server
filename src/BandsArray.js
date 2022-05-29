@@ -1,5 +1,6 @@
 const { Information } = require("./Information");
 const { Festival } = require("./Festival.js");
+const { shuffle } = require("./util/shuffle");
 
 const fest = new Festival("FooFest");
 const data = new Information(fest).slots;
@@ -23,6 +24,7 @@ const addBands = (allBands) => {
     }
   }
 
+  shuffle(allBands);
   return allBands;
 };
 
