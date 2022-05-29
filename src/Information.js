@@ -105,6 +105,7 @@ class Information {
     acts.forEach((act) => {
       let color;
       let runeUrl;
+      let logo;
 
       if (stage === "Midgard") {
         color = "accent_red";
@@ -117,6 +118,12 @@ class Information {
         runeUrl = "jotunheim.svg";
       }
 
+      if (act.logo.includes("http://")) {
+        logo = act.logo;
+      } else {
+        logo = `https://YOURAPP.heroku.com/logos/${act.logo}`;
+      }
+
       nextActs.push({
         start: numberToTime(start),
         end: numberToTime(start + 2),
@@ -124,7 +131,7 @@ class Information {
         members: act.members,
         genre: act.genre,
         logoCredits: act.logoCredits,
-        logo: act.logo,
+        logo,
         bio: act.bio,
         favorite: false,
         stage,
