@@ -139,6 +139,7 @@ class Information {
         color,
         runeUrl,
       });
+
       nextActs.push({
         start: numberToTime(start + 2),
         end: numberToTime(start + 4),

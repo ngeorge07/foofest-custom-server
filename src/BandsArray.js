@@ -17,7 +17,7 @@ const addBands = (allBands) => {
       for (let i = 0; i < data[stage][day].length; i++) {
         const band = data[stage][day][i];
 
-        if (band.act !== "break") {
+        if (band.name !== "break") {
           addBand(band);
         }
       }
