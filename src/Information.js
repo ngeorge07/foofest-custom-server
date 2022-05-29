@@ -121,7 +121,7 @@ class Information {
       if (act.logo.includes("https://")) {
         logo = act.logo;
       } else {
-        logo = `https://cphrt1.heroku.com/logos/${act.logo}`;
+        logo = `https://cphrt1.herokuapp.com/logos/${act.logo}`;
       }
 
       nextActs.push({
