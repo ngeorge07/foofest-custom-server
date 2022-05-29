@@ -56,7 +56,7 @@ class Information {
 
   fillSlots() {
     const copy = bands.map((band) => band);
-    shuffle(copy);
+    shuffle(copy.slice(16, 126));
 
     this._fillStage(this.scenes[0], copy.slice(0, 42));
     this._fillStage(this.scenes[1], copy.slice(42, 84));
@@ -134,7 +134,7 @@ class Information {
         logo,
         bio: act.bio,
         favorite: false,
-        stage,
+        stage: act.stage ? act.stage : stage,
         day,
         color,
         runeUrl,
