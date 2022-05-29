@@ -16,11 +16,17 @@ app.use(function (req, res, next) {
 app.use(express.static("public"));
 const { FooFest } = require("./src/foofest");
 const { initialSettings } = require("./src/static/settings");
+
 app.get("/bands", function (req, res) {
   res.json(FooFest.bands);
 });
+
 app.get("/schedule", function (req, res) {
   res.json(FooFest.schedule);
+});
+
+app.get("/information", function (req, res) {
+  res.json(FooFest.information);
 });
 
 app.get("/version", function (req, res) {

@@ -6,6 +6,7 @@ const { Schedule } = require("./Schedule.js");
 const { Festival } = require("./Festival.js");
 const { EventLog } = require("./EventLog");
 const { Booking } = require("./Booking");
+const { Information } = require("./Information");
 const Bands = require("./Bands.js");
 
 function createFest(name) {
@@ -14,6 +15,10 @@ function createFest(name) {
   //fest.setEventChance(90);
   const schedule = new Schedule(fest);
   fest.schedule = schedule.slots;
+
+  const information = new Information(fest);
+  fest.information = information.slots;
+
   fest.bands = Bands;
   const eventLog = new EventLog();
   fest.eventLog = eventLog;
