@@ -118,10 +118,10 @@ class Information {
         runeUrl = "jotunheim.svg";
       }
 
-      if (act.logo.includes("http://")) {
+      if (act.logo.includes("https://")) {
         logo = act.logo;
       } else {
-        logo = `https://YOURAPP.heroku.com/logos/${act.logo}`;
+        logo = `https://cphrt1.heroku.com/logos/${act.logo}`;
       }
 
       nextActs.push({
