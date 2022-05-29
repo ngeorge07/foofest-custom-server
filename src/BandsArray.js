@@ -1,6 +1,7 @@
 const { Information } = require("./Information");
 const { Festival } = require("./Festival.js");
 const { shuffle } = require("./util/shuffle");
+const { all } = require("express/lib/application");
 
 const fest = new Festival("FooFest");
 const data = new Information(fest).slots;
@@ -25,6 +26,13 @@ const addBands = (allBands) => {
   }
 
   shuffle(allBands.slice(16, 126));
+
+  const firstHalf = allBands.slice(0, 16);
+  const secondHalf = allBands.slice(16, 126);
+  shuffle(secondHalf);
+
+  allBands = firstHalf.concat(secondHalf);
+
   return allBands;
 };
 
