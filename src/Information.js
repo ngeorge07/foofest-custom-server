@@ -55,13 +55,6 @@ class Information {
   }
 
   fillSlots() {
-    // const firstHalf = bands.slice(0, 16);
-    // const secondHalf = bands.slice(16, 126);
-    // shuffle(secondHalf);
-
-    // const copy = firstHalf.concat(secondHalf).map((band) => band);
-    // console.log(copy.slice(0, 42).length);
-
     const copy = bands.map((band) => band);
 
     this._fillStage(this.scenes[0], copy.slice(0, 42));
