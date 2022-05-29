@@ -120,7 +120,7 @@ class Information {
       nextActs.push({
         start: numberToTime(start),
         end: numberToTime(start + 2),
-        act: act.name,
+        name: act.name,
         members: act.members,
         genre: act.genre,
         logoCredits: act.logoCredits,
@@ -135,7 +135,7 @@ class Information {
       nextActs.push({
         start: numberToTime(start + 2),
         end: numberToTime(start + 4),
-        act: "break",
+        name: "break",
       });
       start += 4;
     });
