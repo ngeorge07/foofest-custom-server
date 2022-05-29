@@ -21,6 +21,10 @@ app.get("/bands", function (req, res) {
   res.json(FooFest.bands);
 });
 
+app.get("/allbands", function (req, res) {
+  res.json(FooFest.bandsArray);
+});
+
 app.get("/schedule", function (req, res) {
   res.json(FooFest.schedule);
 });

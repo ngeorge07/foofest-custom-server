@@ -8,6 +8,7 @@ const { EventLog } = require("./EventLog");
 const { Booking } = require("./Booking");
 const { Information } = require("./Information");
 const Bands = require("./Bands.js");
+const BandsArray = require("./BandsArray.js");
 
 function createFest(name) {
   const fest = new Festival(name);
@@ -20,6 +21,7 @@ function createFest(name) {
   fest.information = information.slots;
 
   fest.bands = Bands;
+  fest.bandsArray = BandsArray;
 
   const eventLog = new EventLog();
   fest.eventLog = eventLog;
