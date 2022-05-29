@@ -62,7 +62,10 @@ class Information {
     const copy = firstHalf.concat(secondHalf).map((band) => band);
     console.log(copy.slice(0, 42).length);
 
-    this._fillStage(this.scenes[0], copy.slice(0, 42));
+    this._fillStage(
+      this.scenes[0],
+      copy.filter((band) => band.stage === "Midgard").concat(copy.slice(16, 42))
+    );
     this._fillStage(this.scenes[1], copy.slice(42, 84));
     this._fillStage(this.scenes[2], copy.slice(84, 126));
   }
