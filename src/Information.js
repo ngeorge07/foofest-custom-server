@@ -132,7 +132,7 @@ class Information {
         logoCredits: act.logoCredits,
         logo,
         bio: act.bio,
-        favorite: true,
+        favorite: false,
         stage: act.stage ? act.stage : stage,
         day,
         color,
