@@ -10,18 +10,6 @@ class Information {
   constructor(fest) {
     //TODO: ? flatten array and add stage/day?
 
-    this.fest = fest;
-
-    this.scenes = ["Midgard", "Vanaheim", "Jotunheim"];
-    this.days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
-    this.slots = {};
-    this.scenes.forEach((scene) => {
-      this.slots[scene] = this._setEmptyStage();
-    });
-    this.fillSlots();
-    this.tick.bind(this);
-    observer.subscribe(events.TICK, () => this.tick());
-
     let allBands = [];
 
     const addBands = (allBands) => {
@@ -51,6 +39,18 @@ class Information {
     };
 
     this.info = addBands(allBands);
+
+    this.fest = fest;
+
+    this.scenes = ["Midgard", "Vanaheim", "Jotunheim"];
+    this.days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+    this.slots = {};
+    this.scenes.forEach((scene) => {
+      this.slots[scene] = this._setEmptyStage();
+    });
+    this.fillSlots();
+    this.tick.bind(this);
+    observer.subscribe(events.TICK, () => this.tick());
   }
 
   tick() {
