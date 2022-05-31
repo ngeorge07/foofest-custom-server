@@ -18,9 +18,10 @@ class Information {
     this.scenes.forEach((scene) => {
       this.slots[scene] = this._setEmptyStage();
     });
-    this.info = this.addBands();
 
     this.fillSlots();
+    this.info = this.addBands();
+
     this.tick.bind(this);
     observer.subscribe(events.TICK, () => this.tick());
   }
