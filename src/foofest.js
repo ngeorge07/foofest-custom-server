@@ -2,7 +2,7 @@
 const version = "0.0.1";
 //====================
 
-const { Schedule } = require("./Schedule.js");
+// const { Schedule } = require("./Schedule.js");
 const { Festival } = require("./Festival.js");
 const { EventLog } = require("./EventLog");
 const { Booking } = require("./Booking");
@@ -14,8 +14,8 @@ function createFest(name) {
   const fest = new Festival(name);
   //fest.setEventFrequency(3);
   //fest.setEventChance(90);
-  const schedule = new Schedule(fest);
-  fest.schedule = schedule.slots;
+  // const schedule = new Schedule(fest);
+  // fest.schedule = schedule.slots;
 
   const information = new Information(fest);
   fest.information = information.info;
