@@ -27,7 +27,7 @@ class Information {
   }
 
   addBands() {
-    const allBands = [];
+    let allBands = [];
 
     function addBand(band) {
       return allBands.push(band);
