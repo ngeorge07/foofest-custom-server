@@ -1,6 +1,5 @@
 //var faker = require("faker");
 const bands = require("./static/bands.json");
-const { shuffle } = require("./util/shuffle");
 const { numberToTime } = require("./util/numberToTime");
 const { rndBetween, rndBetweenEven } = require("./util/rnd");
 const { observer } = require("./util/observer");
@@ -34,7 +33,7 @@ class Information {
         observer.publish(events.CANCELLATION, {
           scene,
           day,
-          act: this.slots[scene][day][slot],
+          name: this.slots[scene][day][slot],
         }); //TODO args, which event
         this.slots[scene][day][slot].cancelled = true;
       }
