@@ -18,14 +18,16 @@ class Information {
     this.scenes.forEach((scene) => {
       this.slots[scene] = this._setEmptyStage();
     });
-    this.info = this.addBands([]);
+    this.info = this.addBands();
 
     this.fillSlots();
     this.tick.bind(this);
     observer.subscribe(events.TICK, () => this.tick());
   }
 
-  addBands(allBands) {
+  addBands() {
+    const allBands = [];
+
     function addBand(band) {
       return allBands.push(band);
     }
