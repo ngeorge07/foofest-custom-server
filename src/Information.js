@@ -149,8 +149,6 @@ class Information {
       }
 
       nextActs.push({
-        start: numberToTime(start),
-        end: numberToTime(start + 2),
         name: act.name,
         members: act.members,
         genre: act.genre,
@@ -160,6 +158,9 @@ class Information {
         favorite: false,
         stage: act.stage ? act.stage : stage,
         day,
+        startN: parseInt(numberToTime(start).slice(0, 3)),
+        start: numberToTime(start),
+        end: numberToTime(start + 2),
         color,
         runeUrl,
       });
