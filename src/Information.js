@@ -10,36 +10,6 @@ class Information {
   constructor(fest) {
     //TODO: ? flatten array and add stage/day?
 
-    let allBands = [];
-
-    const addBands = (allBands) => {
-      function addBand(band) {
-        return allBands.push(band);
-      }
-
-      for (const stage in this.slots) {
-        for (const day in this.slots[stage]) {
-          for (let i = 0; i < this.slots[stage][day].length; i++) {
-            const band = this.slots[stage][day][i];
-
-            if (band.name !== "break") {
-              addBand(band);
-            }
-          }
-        }
-      }
-
-      const firstHalf = allBands.slice(0, 16);
-      const secondHalf = allBands.slice(16, 126);
-      shuffle(secondHalf);
-
-      allBands = firstHalf.concat(secondHalf);
-
-      return allBands;
-    };
-
-    this.info = addBands(allBands);
-
     this.fest = fest;
 
     this.scenes = ["Midgard", "Vanaheim", "Jotunheim"];
@@ -51,6 +21,34 @@ class Information {
     this.fillSlots();
     this.tick.bind(this);
     observer.subscribe(events.TICK, () => this.tick());
+
+    this.info = this.addBands([]);
+  }
+
+  addBands(allBands) {
+    function addBand(band) {
+      return allBands.push(band);
+    }
+
+    for (const stage in this.slots) {
+      for (const day in this.slots[stage]) {
+        for (let i = 0; i < this.slots[stage][day].length; i++) {
+          const band = this.slots[stage][day][i];
+
+          if (band.name !== "break") {
+            addBand(band);
+          }
+        }
+      }
+    }
+
+    const firstHalf = allBands.slice(0, 16);
+    const secondHalf = allBands.slice(16, 126);
+    shuffle(secondHalf);
+
+    allBands = firstHalf.concat(secondHalf);
+
+    return allBands;
   }
 
   tick() {
