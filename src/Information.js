@@ -58,9 +58,8 @@ class Information {
       const slot = rndBetweenEven(0, 10);
 
       if (!this.slots[scene][day][slot].cancelled) {
+        observer.publish(events.CANCELLATION, this.slots[scene][day][slot]); //TODO args, which event
         this.slots[scene][day][slot].cancelled = true;
-        // observer.publish(events.CANCELLATION, this.slots[scene][day][slot]); //TODO args, which event
-        // this.slots[scene][day][slot].cancelled = true;
       }
     }
   }
