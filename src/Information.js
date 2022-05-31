@@ -49,6 +49,7 @@ class Information {
 
       return allBands;
     };
+
     this.info = addBands(allBands);
   }
 
