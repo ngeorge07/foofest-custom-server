@@ -18,7 +18,7 @@ function createFest(name) {
   fest.schedule = schedule.slots;
 
   const information = new Information(fest);
-  fest.information = information.slots;
+  fest.information = information.info;
 
   fest.bands = Bands;
   fest.bandsArray = BandsArray;

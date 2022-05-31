@@ -19,10 +19,7 @@ const addBands = (allBands) => {
         const band = data[stage][day][i];
 
         if (band.name !== "break") {
-          if (band.cancelled) {
-            const newBand = { ...band, cancelled: true };
-            addBand(newBand);
-          } else addBand(band);
+          addBand(band);
         }
       }
     }

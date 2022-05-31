@@ -1,5 +1,6 @@
 //var faker = require("faker");
 const bands = require("./static/bands.json");
+const { shuffle } = require("./util/shuffle");
 const { numberToTime } = require("./util/numberToTime");
 const { rndBetween, rndBetweenEven } = require("./util/rnd");
 const { observer } = require("./util/observer");
@@ -20,6 +21,35 @@ class Information {
     this.fillSlots();
     this.tick.bind(this);
     observer.subscribe(events.TICK, () => this.tick());
+
+    let allBands = [];
+
+    const addBands = (allBands) => {
+      function addBand(band) {
+        return allBands.push(band);
+      }
+
+      for (const stage in this.slots) {
+        for (const day in this.slots[stage]) {
+          for (let i = 0; i < this.slots[stage][day].length; i++) {
+            const band = this.slots[stage][day][i];
+
+            if (band.name !== "break") {
+              addBand(band);
+            }
+          }
+        }
+      }
+
+      const firstHalf = allBands.slice(0, 16);
+      const secondHalf = allBands.slice(16, 126);
+      shuffle(secondHalf);
+
+      allBands = firstHalf.concat(secondHalf);
+
+      return allBands;
+    };
+    this.info = addBands(allBands);
   }
 
   tick() {
@@ -33,7 +63,7 @@ class Information {
         observer.publish(events.CANCELLATION, {
           scene,
           day,
-          name: this.slots[scene][day][slot],
+          act: this.slots[scene][day][slot],
         }); //TODO args, which event
         this.slots[scene][day][slot].cancelled = true;
       }
@@ -93,8 +123,6 @@ class Information {
       stage,
       "Sunday"
     );
-
-    //console.dir(this.slots);
   }
 
   _addBreaks(acts, stage, day) {
