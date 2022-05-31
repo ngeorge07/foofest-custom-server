@@ -61,9 +61,7 @@ class Information {
 
       if (!this.slots[scene][day][slot].cancelled) {
         this.slots[scene][day][slot].cancelled = true;
-        observer.publish(events.CANCELLATION, {
-          ...this.slots[scene][day][slot],
-        }); //TODO args, which event
+        observer.publish(events.CANCELLATION, this.slots[scene][day][slot]); //TODO args, which event
         this.slots[scene][day][slot].cancelled = true;
       }
     }
