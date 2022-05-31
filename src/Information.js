@@ -159,6 +159,7 @@ class Information {
         day,
         color,
         runeUrl,
+        cancelled: act.cancelled ? true : false,
       });
 
       nextActs.push({
